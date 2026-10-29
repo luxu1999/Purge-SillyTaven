@@ -1,0 +1,57 @@
+.purge-tavern .pt-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+
+.purge-tavern .pt-row label {
+    flex: 0 0 auto;
+    min-width: 72px;
+}
+
+.purge-tavern .pt-textarea {
+    flex: 1 1 100%;
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    font-family: ui-monospace, Consolas, "Cascadia Mono", monospace;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.purge-tavern .pt-textarea.pt-small {
+    min-height: 64px;
+}
+
+.purge-tavern .pt-num {
+    flex: 0 0 96px;
+    width: 96px;
+}
+
+.purge-tavern .pt-hint {
+    color: var(--SmartThemeQuoteColor, #999);
+    font-size: 12px;
+    margin: 4px 0;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.purge-tavern #pt_state {
+    font-weight: 600;
+}
+
+.purge-tavern #pt_state.pt-off {
+    opacity: 0.6;
+}
+
+.purge-tavern .pt-actions {
+    gap: 8px;
+}
+
+.purge-tavern hr {
+    border: none;
+    border-top: 1px solid var(--SmartThemeBorderColor, rgba(128, 128, 128, 0.3));
+    margin: 12px 0;
+}

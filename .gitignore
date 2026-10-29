@@ -1,0 +1,15 @@
+# 本地参考资料（dsh-purge 上游快照与解包产物，不入库）
+_ref/
+.vdsh/
+
+# 依赖与运行产物
+node_modules/
+*.log
+*.tmp
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

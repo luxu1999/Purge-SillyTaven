@@ -1,0 +1,14 @@
+{
+  "name": "purge-tavern",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SillyTavern extension: prompt-override injection + append-only message vault (anti-recall)",
+  "type": "module",
+  "author": "luxu1999",
+  "license": "MIT",
+  "homepage": "https://github.com/luxu1999/dsh-purge-luxu1999",
+  "keywords": ["sillytavern", "extension", "jailbreak", "prompt", "vault"],
+  "scripts": {
+    "check": "node --check index.js && node --check src/settings.js && node --check src/inject.js && node --check src/vault.js"
+  }
+}

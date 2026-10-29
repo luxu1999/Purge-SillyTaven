@@ -1,0 +1,80 @@
+<div id="purge_tavern_settings" class="purge-tavern">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>Purge 破限 · 防撤回</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="pt-row">
+                <label class="checkbox_label">
+                    <input id="pt_enabled" type="checkbox" />
+                    <span>启用注入（破限）</span>
+                </label>
+                <label class="checkbox_label">
+                    <input id="pt_strip" type="checkbox" />
+                    <span>剥离系统段里的 AI 自我声明 / 拒答句</span>
+                </label>
+                <label class="checkbox_label" title="把注入内容和事件写进浏览器控制台，排障用">
+                    <input id="pt_debug" type="checkbox" />
+                    <span>调试日志</span>
+                </label>
+            </div>
+
+            <div class="pt-row">
+                <label for="pt_profile">注入档位</label>
+                <select id="pt_profile" class="text_pole">
+                    <option value="rp">默认档（角色扮演向）</option>
+                    <option value="original">原版搬运（dsh-purge 那套）</option>
+                    <option value="custom">自定义</option>
+                </select>
+                <label for="pt_position">插入位置</label>
+                <select id="pt_position" class="text_pole">
+                    <option value="system-head">系统段开头</option>
+                    <option value="system-tail">系统段结尾</option>
+                    <option value="prepend">整个 prompt 最前面</option>
+                    <option value="append">整个 prompt 最后面</option>
+                </select>
+            </div>
+
+            <div class="pt-row" id="pt_custom_wrap">
+                <label for="pt_custom_text">自定义注入文本</label>
+                <textarea id="pt_custom_text" class="text_pole pt-textarea" rows="8"
+                    placeholder="切到「自定义」档位后生效；支持任意文本，酒馆不会二次解析。"></textarea>
+            </div>
+
+            <div class="pt-row">
+                <label for="pt_strip_extra">额外剥离正则（每行一条，可选）</label>
+                <textarea id="pt_strip_extra" class="text_pole pt-textarea pt-small" rows="3"
+                    placeholder="例如：^\s*请注意：.*$"></textarea>
+            </div>
+
+            <div class="pt-hint" id="pt_preview_meta"></div>
+            <div class="pt-hint" id="pt_state"></div>
+            <div class="pt-row pt-actions">
+                <input id="pt_save_preset" class="menu_button" type="button" value="导出当前注入文本" />
+            </div>
+
+            <hr />
+
+            <div class="pt-row">
+                <label class="checkbox_label">
+                    <input id="pt_vault_enabled" type="checkbox" />
+                    <span>启用消息保险箱（防撤回）</span>
+                </label>
+                <label for="pt_vault_cap">每聊天最多</label>
+                <input id="pt_vault_cap" class="text_pole pt-num" type="number" min="10" max="2000" step="10" />
+                <span class="pt-hint">条</span>
+            </div>
+            <div class="pt-hint" id="pt_vault_status"></div>
+            <div class="pt-row pt-actions">
+                <input id="pt_vault_export" class="menu_button" type="button" value="导出快照 JSON" />
+                <input id="pt_vault_restore" class="menu_button" type="button" value="合并回当前聊天" />
+                <input id="pt_vault_clear" class="menu_button" type="button" value="清空当前聊天快照" />
+            </div>
+            <div class="pt-hint">
+                保险箱只增不删：消息被删除、被 swipe 覆盖、被编辑之后，原始版本仍然留在快照里。
+                命令：<code>/purge-export</code>、<code>/purge-restore</code>、<code>/purge-status</code>。
+            </div>
+        </div>
+    </div>
+</div>

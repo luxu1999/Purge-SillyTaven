@@ -1,0 +1,14 @@
+{
+  "display_name": "Purge 破限 · 防撤回",
+  "loading_order": 6,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "luxu1999",
+  "version": "0.1.0",
+  "homePage": "https://github.com/luxu1999/dsh-purge-luxu1999",
+  "hooks": {
+    "activate": "init"
+  }
+}
